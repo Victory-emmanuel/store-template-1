@@ -6,11 +6,12 @@ import {
   CardBody,
   Typography,
 } from "@material-tailwind/react";
+import BuyNowButton from "./BuyNowButton";
 
 const BestSellerProductCard = ({ name, description, price, image }) => {
   return (
     <motion.div
-      className="h-full"
+      className="h-full py-8"
       initial={{ scale: 1 }}
       whileTap={{ scale: 0.95 }}
       transition={{ ease: "easeInOut", duration: 0.5 }}
@@ -24,6 +25,11 @@ const BestSellerProductCard = ({ name, description, price, image }) => {
             className="h-full w-full object-cover transition-all duration-300 group-hover:scale-110"
           />
           {/* Button is visible by default on mobile and tablet, with hover effect on desktop */}
+
+          <div className="absolute inset-0 flex items-center justify-center bg-black ss:bg-opacity-0 xx:bg-opacity-50 opacity-100 transition-all duration-300 group-hover:bg-opacity-50 group-hover:opacity-100 xx:opacity-100 ss:opacity-0">
+            <BuyNowButton name={name} price={price} image={image} />
+          </div>
+
           <div className="absolute inset-0 flex items-center justify-center bg-black ss:bg-opacity-0 xx:bg-opacity-50 opacity-100 transition-all duration-300 group-hover:bg-opacity-50 group-hover:opacity-100 xx:opacity-100  ss:opacity-0">
             <motion.button
               initial={{ rotateZ: "0deg", scale: 1 }}

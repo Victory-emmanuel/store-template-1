@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 // components/ShopPage/PriceRangeFilter.jsx
-import { useState } from "react";
 
 const PriceRangeFilter = ({ selectedPriceRange, handlePriceRangeChange }) => {
   const priceRanges = [
@@ -18,7 +17,7 @@ const PriceRangeFilter = ({ selectedPriceRange, handlePriceRangeChange }) => {
       </h3>
       {priceRanges.map((range, index) => (
         <div key={index} className="block">
-          <label className=" flex space-x-4 flex-row mb-2 ">
+          <label className="  space-x-4  mb-2 ">
             <input
               type="radio"
               name="priceRange"
@@ -28,7 +27,6 @@ const PriceRangeFilter = ({ selectedPriceRange, handlePriceRangeChange }) => {
               className="mr-2 text=accent bg-primary
               focus:ring-accent focus:ring-2 focus:ring-opacity-50"
             />
-
             {range.label}
           </label>
         </div>

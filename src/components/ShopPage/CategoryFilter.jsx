@@ -11,9 +11,11 @@ const CategoryFilter = ({ selectedCategory, handleCategoryChange }) => {
 
   return (
     <div className="mb-4">
-      <h2 className="text-lg font-semibold mb-2">Filter by Category</h2>
+      <h2 className="text-lg font-semibold mb-2 text-accent">
+        Filter by Category
+      </h2>
       <div className="w-full  xx:scroll-my-4 xx:overflow-x-scroll ss:overflow-hidden">
-        <div className="flex space-x-2">
+        <div className="flex space-x-2 space-y-2 xx:flex-wrap ss:flex-nowrap py-6 ">
           {categories.map((category) => (
             <button
               key={category.value}
@@ -22,7 +24,7 @@ const CategoryFilter = ({ selectedCategory, handleCategoryChange }) => {
                 selectedCategory === category.value
                   ? "bg-accent text-primary"
                   : "bg-primary text-secondary"
-              } hover:bg-accent hover:text-primary transition-all duration-300`}
+              } hover:bg-accent hover:text-primary  xx:drop-shadow xx:shadow-secondary  transition-all duration-300`}
             >
               {category.display}
             </button>

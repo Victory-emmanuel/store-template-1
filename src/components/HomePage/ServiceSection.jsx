@@ -141,7 +141,7 @@ const ServiceModal = ({ isOpen, onClose, service }) => {
 
 const services = [
   {
-    title: "Web Development",
+    title: "Hair Therapist",
     description: "Create stunning websites",
     details:
       "Our web development service focuses on creating responsive, user-friendly, and visually appealing websites. We use the latest technologies and best practices to ensure your site is fast, secure, and optimized for search engines.",
@@ -165,7 +165,7 @@ const services = [
     image: "https://i.postimg.cc/5NKYG32c/1500-x-1000-2.png",
   },
   {
-    title: "Mobile App Development",
+    title: "Nail Technician",
     description: "Build powerful mobile apps",
     details:
       "We specialize in developing high-performance, feature-rich mobile applications for both iOS and Android platforms. Our team uses cutting-edge technologies to create intuitive and engaging mobile experiences for your users.",

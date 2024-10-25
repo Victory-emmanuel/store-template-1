@@ -6,7 +6,7 @@ const SearchInput = ({ searchTerm, handleSearch }) => {
         type="text"
         value={searchTerm}
         onChange={handleSearch}
-        className="p-2  ring-0 bg-primary rounded md:w-[50%] focus:outline-none focus:ring-0 placeholder:text-secondary placeholder:text-opacity-50"
+        className="px-2 py-3 ring-0 bg-primary rounded w-[50rem] focus:outline-none focus:ring-0 placeholder:text-secondary placeholder:text-opacity-50"
         placeholder="Search for a product..."
       />
     </div>

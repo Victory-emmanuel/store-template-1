@@ -5,6 +5,8 @@ import { BestSellerData } from "../../database/BestSellerData";
 import BestSellerProductCard from "../Universal/BestSellerProductCard";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const BestSellerSection = () => {
   const containerVariants = {
@@ -33,7 +35,7 @@ const BestSellerSection = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3, // Adjust for how many cards to show
+    slidesToShow: 4, // Adjust for how many cards to show
     slidesToScroll: 1,
     responsive: [
       {
@@ -93,6 +95,23 @@ const BestSellerSection = () => {
           <BestSellerProductCard key={product.id} {...product} />
         ))}
       </Slider>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+        className=" ss:text-center xx:text-left ss:my-12 "
+      >
+        <HashLink to="/shop">
+          <motion.button
+            initial={{ rotateZ: "0deg", scale: 1 }}
+            whileHover={{ rotateZ: "-2deg", scale: 1.03 }}
+            transition={{ duration: 0.75, ease: "easeInOut" }}
+            className=" bg-transparent text-accent  hover:bg-transparent border border-accent hover:border-secondary hover:text-secondary duration-700 rounded-md  xs:py-3 xs:px-6 xs:text-base xx:py-2 xx:px-4 xx:text-sm"
+          >
+            View All Products
+          </motion.button>
+        </HashLink>
+      </motion.div>
     </motion.section>
   );
 };

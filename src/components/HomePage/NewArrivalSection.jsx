@@ -5,6 +5,7 @@ import { NewProductData } from "../../database/NewProductData";
 import NewArrivalProductCard from "../Universal/NewArrivalProductCard";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Link } from "react-router-dom";
 
 const NewArrivalSection = () => {
   const containerVariants = {
@@ -33,7 +34,7 @@ const NewArrivalSection = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3, // Adjust for how many cards to show
+    slidesToShow: 4, // Adjust for how many cards to show
     slidesToScroll: 1,
     responsive: [
       {
@@ -84,7 +85,7 @@ const NewArrivalSection = () => {
           variant="h2"
           className="mb-4 ss:text-3xl xx:text-2xl text-secondary text-center"
         >
-          Our <span className="text-accent">Best Sellers</span>
+          Our <span className="text-accent">New Arrival</span>
         </Typography>
       </motion.div>
 
@@ -93,6 +94,23 @@ const NewArrivalSection = () => {
           <NewArrivalProductCard key={product.id} {...product} />
         ))}
       </Slider>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+        className=" ss:text-center xx:text-left ss:my-12 "
+      >
+        <Link to="/shop">
+          <motion.button
+            initial={{ rotateZ: "0deg", scale: 1 }}
+            whileHover={{ rotateZ: "-2deg", scale: 1.03 }}
+            transition={{ duration: 0.75, ease: "easeInOut" }}
+            className=" bg-transparent text-accent  hover:bg-transparent border border-accent hover:border-secondary hover:text-secondary duration-700 rounded-md  xs:py-3 xs:px-6 xs:text-base xx:py-2 xx:px-4 xx:text-sm"
+          >
+            View All Products
+          </motion.button>
+        </Link>
+      </motion.div>
     </motion.section>
   );
 };
