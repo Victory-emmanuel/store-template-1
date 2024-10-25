@@ -24,9 +24,15 @@ body {
   font-smooth: always;
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
-  background-color: #fff;
-  color: #24050f;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  @apply bg-primary dark:bg-secondary text-secondary dark:text-primary transition-colors duration-1000;
 }
+
 /* Add your font family for the text to you body for header text */
 h1,
 h2,

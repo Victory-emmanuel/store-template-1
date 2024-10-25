@@ -65,7 +65,7 @@ const Shop = () => {
   }, []);
 
   return (
-    <div id="shopage" className="py-16">
+    <div id="shopage" className="py-16 bg-white dark:bg-black">
       <div className="mb-12 ">
         <h1 className="ss:text-4xl text-2xl font-bold mb-4 ss:pl-12 xx:pl-6">
           Welcome! To <span className="text-accent "> Jasmaine's Store</span>

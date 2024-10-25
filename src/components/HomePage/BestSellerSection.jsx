@@ -73,7 +73,7 @@ const BestSellerSection = () => {
   return (
     <motion.section
       variants={containerVariants}
-      className="py-16 px-4 bg-white"
+      className="py-16 px-4 bg-white dark:bg-black"
     >
       <motion.div
         initial={{ x: -200 }}
@@ -84,7 +84,7 @@ const BestSellerSection = () => {
       >
         <Typography
           variant="h2"
-          className="mb-4 ss:text-3xl xx:text-2xl text-secondary text-center"
+          className="mb-4 ss:text-3xl xx:text-2xl text-center"
         >
           Our <span className="text-accent">Best Sellers</span>
         </Typography>
@@ -106,7 +106,7 @@ const BestSellerSection = () => {
             initial={{ rotateZ: "0deg", scale: 1 }}
             whileHover={{ rotateZ: "-2deg", scale: 1.03 }}
             transition={{ duration: 0.75, ease: "easeInOut" }}
-            className=" bg-transparent text-accent  hover:bg-transparent border border-accent hover:border-secondary hover:text-secondary duration-700 rounded-md  xs:py-3 xs:px-6 xs:text-base xx:py-2 xx:px-4 xx:text-sm"
+            className=" bg-transparent text-accent  hover:bg-transparent border border-accent hover:border-secondary hover:text-secondary dark:hover:border-primary dark:hover:text-primary duration-700 rounded-md  xs:py-3 xs:px-6 xs:text-base xx:py-2 xx:px-4 xx:text-sm"
           >
             View All Products
           </motion.button>

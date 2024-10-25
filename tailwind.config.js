@@ -18,7 +18,7 @@ export default {
         //--website
         primary: "#FDEDF2",
         //Your secondary color are for text
-        secondary: "#24050F",
+        secondary: "#360716",
         // Your accent color is for call to actions like buttons and links
 
         accent: "#DC1856",

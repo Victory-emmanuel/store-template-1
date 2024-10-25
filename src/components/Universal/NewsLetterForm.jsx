@@ -11,7 +11,7 @@ const NewsLetterForm = () => {
             "url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80')",
         }}
       >
-        <div className="absolute inset-0 bg-primary bg-opacity-75"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-75"></div>
       </div>
 
       <motion.div
@@ -20,7 +20,7 @@ const NewsLetterForm = () => {
         transition={{ duration: 0.5 }}
         className="z-10 w-full max-w-md"
       >
-        <Card color="transparent" shadow={false} className="text-secondary">
+        <Card color="transparent" shadow={false} className="text-primary">
           <Typography variant="h3" className="mb-4 text-center">
             Subscribe to Our <span className="text-accent">Newsletter</span>
           </Typography>
@@ -39,7 +39,7 @@ const NewsLetterForm = () => {
                 type="email"
                 name="EMAIL"
                 placeholder="Enter your email"
-                className="!border-t-accent !border-x-accent !border-b-accent text-white placeholder:text-secondary focus:bg-primary focus:text-white focus:border-accent"
+                className="!border-t-accent !border-x-accent !border-b-accent text-white placeholder:text-secondary focus:bg-primary focus:text-secondary focus:border-accent duration-300"
                 labelProps={{
                   className: "before:content-none after:content-none",
                 }}

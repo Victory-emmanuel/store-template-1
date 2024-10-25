@@ -17,7 +17,10 @@ const AboutSection = () => {
     },
   };
   return (
-    <section id="about" className="py-16 xx:px-6  ss:px-12 bg-primary">
+    <section
+      id="about"
+      className="py-16 xx:px-6  ss:px-12 bg-primary dark:bg-black"
+    >
       <div className=" mx-auto">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <motion.div
@@ -27,8 +30,8 @@ const AboutSection = () => {
             transition={{ duration: 0.8 }}
           >
             <img
-              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
-              alt="Team working together"
+              src="https://i.postimg.cc/Bb0ZrJQX/1500-x-1000.png"
+              alt="About me"
               className="rounded-lg shadow-lg w-full h-auto object-cover"
             />
           </motion.div>
@@ -47,12 +50,12 @@ const AboutSection = () => {
             >
               <Typography
                 variant="h2"
-                className="mb-4 ss:text-3xl xx:text-2xl text-secondary "
+                className="mb-4 ss:text-3xl xx:text-2xl  "
               >
                 About <span className="text-accent">Me</span>
               </Typography>
             </motion.div>
-            <Typography className="text-black mb-6">
+            <Typography className=" mb-6">
               We are a passionate team dedicated to creating innovative
               solutions that make a difference. With years of experience and a
               commitment to excellence, we strive to exceed expectations and
@@ -60,18 +63,12 @@ const AboutSection = () => {
               technology with creative thinking to solve complex problems and
               drive growth for our clients.
             </Typography>
-            <Typography className="text-black mb-8">
+            <Typography className=" mb-8">
               Whether you're a startup looking to disrupt the market or an
               established enterprise seeking to stay ahead of the curve, we have
               the expertise and resources to help you achieve your goals. Join
               us on this exciting journey of innovation and success.
             </Typography>
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button className="bg-accent text-white flex gap-2" size="lg">
-                Learn More
-                <FaArrowRight className="text-sm" />
-              </Button>
-            </motion.div>
           </motion.div>
         </div>
       </div>

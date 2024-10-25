@@ -6,6 +6,7 @@ import NewArrivalProductCard from "../Universal/NewArrivalProductCard";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const NewArrivalSection = () => {
   const containerVariants = {
@@ -72,7 +73,7 @@ const NewArrivalSection = () => {
   return (
     <motion.section
       variants={containerVariants}
-      className="py-16 px-4 bg-primary"
+      className="py-16 px-4 bg-primary dark:bg-secondary"
     >
       <motion.div
         initial={{ x: -200 }}
@@ -83,7 +84,7 @@ const NewArrivalSection = () => {
       >
         <Typography
           variant="h2"
-          className="mb-4 ss:text-3xl xx:text-2xl text-secondary text-center"
+          className="mb-4 ss:text-3xl xx:text-2xl  text-center"
         >
           Our <span className="text-accent">New Arrival</span>
         </Typography>
@@ -100,16 +101,16 @@ const NewArrivalSection = () => {
         transition={{ duration: 0.5, delay: 0.4 }}
         className=" ss:text-center xx:text-left ss:my-12 "
       >
-        <Link to="/shop">
+        <HashLink to="/shop">
           <motion.button
             initial={{ rotateZ: "0deg", scale: 1 }}
             whileHover={{ rotateZ: "-2deg", scale: 1.03 }}
             transition={{ duration: 0.75, ease: "easeInOut" }}
-            className=" bg-transparent text-accent  hover:bg-transparent border border-accent hover:border-secondary hover:text-secondary duration-700 rounded-md  xs:py-3 xs:px-6 xs:text-base xx:py-2 xx:px-4 xx:text-sm"
+            className=" bg-transparent text-accent  hover:bg-transparent border border-accent hover:border-secondary hover:text-secondary dark:hover:border-primary dark:hover:text-primary duration-700 rounded-md  xs:py-3 xs:px-6 xs:text-base xx:py-2 xx:px-4 xx:text-sm"
           >
             View All Products
           </motion.button>
-        </Link>
+        </HashLink>
       </motion.div>
     </motion.section>
   );

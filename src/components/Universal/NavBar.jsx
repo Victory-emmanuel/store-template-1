@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { FaBars, FaTimes, FaSearch } from "react-icons/fa"; // Combined icons
+import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { HashLink } from "react-router-hash-link"; // Import HashLink for smooth scrolling
+import { HashLink } from "react-router-hash-link";
+
+import { Button } from "@material-tailwind/react";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,12 +14,11 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
-  // Updated links with HashLink for smooth scroll and Link for page navigation
   const links = [
-    { name: "Home", path: "/" }, // Regular link
-    { name: "Services", path: "/#services", isHashLink: true }, // HashLink for smooth scrolling
-    { name: "About", path: "/#about", isHashLink: true }, // HashLink for smooth scrolling
-    { name: "Shop", path: "/shop" }, // Regular link
+    { name: "Home", path: "/" },
+    { name: "Services", path: "/#services", isHashLink: true },
+    { name: "About", path: "/#about", isHashLink: true },
+    { name: "Shop", path: "/shop" },
   ];
 
   const linkVariants = {
@@ -25,21 +27,26 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="shadow-lg  relative mb-[5.75rem]">
-      <div className="fixed top-0 z-50 bg-primary right-0 left-0 drop-shadow-lg py-4 ss:px-12 xx:px-6">
+    <nav className="shadow-lg relative mb-[5.75rem] dark:bg-secondary">
+      <div className="fixed top-0 z-50 bg-primary dark:bg-secondary right-0 left-0 drop-shadow-lg py-4 ss:px-12 xx:px-6 transition-colors duration-300">
         <div className="mx-auto flex justify-between items-start">
           {/* Logo */}
           <div>
             <img
               src="https://i.postimg.cc/rFrtmvVj/1000-X-1000-2.png"
-              className="ss:w-[4rem] ss:h-[4rem] xx:w-[3rem] xx:h-[3rem] rounded-full"
+              className="ss:w-[4rem] ss:h-[4rem] xx:w-[3rem] xx:h-[3rem] rounded-full dark:hidden block"
+              alt="Logo"
+            />
+            <img
+              src="https://i.postimg.cc/jjBShzp6/1000-X-1000.png"
+              className="ss:w-[4rem] ss:h-[4rem] xx:w-[3rem] xx:h-[3rem] rounded-full hidden dark:block"
               alt="Logo"
             />
           </div>
 
           {/* Hamburger Icon (Mobile View) */}
           <div
-            className="md:hidden text-2xl text-secondary flex gap-4 items-center my-auto cursor-pointer"
+            className="md:hidden text-2xl text-secondary dark:text-primary flex gap-4 items-center my-auto cursor-pointer"
             onClick={toggleMenu}
           >
             {isOpen ? <FaTimes /> : <FaBars />}
@@ -53,8 +60,8 @@ const Navbar = () => {
                   key={index}
                   to={link.path}
                   smooth
-                  className="text-secondary hover:text-accent md:pb-2 font-medium hover:border-b hover:border-b-accent cursor duration-300"
-                  onClick={() => setIsOpen(false)} // Close menu on click
+                  className="text-secondary dark:text-primary hover:text-accent md:pb-2 font-medium hover:border-b hover:border-b-accent cursor duration-300"
+                  onClick={() => setIsOpen(false)}
                 >
                   {link.name}
                 </HashLink>
@@ -62,23 +69,18 @@ const Navbar = () => {
                 <Link
                   key={index}
                   to={link.path}
-                  className="text-secondary hover:text-accent md:pb-2 font-medium hover:border-b hover:border-b-accent cursor duration-300"
-                  onClick={() => setIsOpen(false)} // Close menu on click
+                  className="text-secondary dark:text-primary hover:text-accent md:pb-2 font-medium hover:border-b hover:border-b-accent cursor duration-300"
+                  onClick={() => setIsOpen(false)}
                 >
                   {link.name}
                 </Link>
               )
             )}
             <div className="md:flex md:gap-8 md:items-center">
-              <FaSearch className="text-accent w-4 h-4 hover:w-5 hover:h-5 duration-300" />
-              <motion.button
-                initial={{ rotateZ: "0deg", scale: 1 }}
-                whileHover={{ rotateZ: "-2deg", scale: 1.03 }}
-                transition={{ duration: 0.75, ease: "easeInOut" }}
-                className="ml-5 bg-accent text-primary hover:bg-transparent hover:border hover:border-accent hover:text-accent duration-700 rounded-md xs:py-3 xs:px-6 xx:py-2 xx:px-4"
-              >
+              <Button className="bg-accent text-primary hover:bg-transparent hover:border hover:border-accent hover:text-accent dark:hover:text-primary duration-700 rounded-md xs:py-3 xs:px-6 xx:py-2 xx:px-4">
                 Contact Us
-              </motion.button>
+              </Button>
+              <ThemeToggle />
             </div>
           </div>
         </div>
@@ -104,30 +106,29 @@ const Navbar = () => {
                   <HashLink
                     to={link.path}
                     smooth
-                    className="text-secondary hover:text-accent font-medium transition-all"
-                    onClick={() => setIsOpen(false)} // Close menu on link click
+                    className="text-secondary dark:text-primary hover:text-accent font-medium transition-all"
+                    onClick={() => setIsOpen(false)}
                   >
                     {link.name}
                   </HashLink>
                 ) : (
                   <Link
                     to={link.path}
-                    className="text-secondary hover:text-accent font-medium transition-all"
-                    onClick={() => setIsOpen(false)} // Close menu on link click
+                    className="text-secondary dark:text-primary hover:text-accent font-medium transition-all"
+                    onClick={() => setIsOpen(false)}
                   >
                     {link.name}
                   </Link>
                 )}
               </motion.div>
             ))}
-            <motion.button
-              initial={{ rotateZ: "0deg", scale: 1 }}
-              whileHover={{ rotateZ: "-2deg", scale: 1.03 }}
-              transition={{ duration: 0.75, ease: "easeInOut" }}
-              className="bg-accent text-primary hover:bg-transparent hover:border hover:border-accent hover:text-accent duration-700 rounded-md xs:py-3 xs:px-6 xx:py-2 xx:px-4"
+            <Button
+              color="white"
+              className="bg-accent text-primary hover:bg-transparent hover:border hover:border-accent hover:text-accent dark:hover:text-primary duration-700 rounded-md xs:py-3 xs:px-6 xx:py-2 xx:px-4"
             >
               Contact Us
-            </motion.button>
+            </Button>
+            <ThemeToggle />
           </motion.div>
         )}
       </div>

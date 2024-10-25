@@ -59,7 +59,7 @@ const TestimonialSection = () => {
   };
 
   return (
-    <section className="py-16 xx:px-6 ss:px-12 bg-white">
+    <section className="py-16 xx:px-6 ss:px-12 bg-primary dark:bg-secondary">
       <div className=" mx-auto">
         <motion.div
           initial={{ x: -200 }}
@@ -70,7 +70,7 @@ const TestimonialSection = () => {
         >
           <Typography
             variant="h2"
-            className="mb-4 ss:text-3xl xx:text-2xl text-secondary text-center"
+            className="mb-4 ss:text-3xl xx:text-2xl text-center "
           >
             What Our <span className="text-accent">Customers</span> Says
           </Typography>
@@ -87,7 +87,7 @@ const TestimonialSection = () => {
             >
               <div>
                 <FaQuoteLeft className="text-4xl text-accent mb-4" />
-                <Typography className="text-secondary mb-6 text-lg italic">
+                <Typography className="mb-6 text-lg italic">
                   {testimonials[currentIndex].content}
                 </Typography>
                 <Typography variant="h6" className="mb-1 text-accent">
@@ -100,7 +100,7 @@ const TestimonialSection = () => {
               <div className="flex md:justify-start justify-center space-x-4 mt-8">
                 <Button
                   variant="text"
-                  className="flex items-center gap-2 text-accent drop-shadow-lg hover:bg-primary duration-300"
+                  className="flex items-center gap-2 text-accent drop-shadow-lg hover:bg-primary dark:hover:bg-black  duration-300"
                   onClick={prevTestimonial}
                 >
                   <FaChevronLeft />
@@ -108,7 +108,7 @@ const TestimonialSection = () => {
                 </Button>
                 <Button
                   variant="text"
-                  className="flex items-center gap-2 text-accent drop-shadow-lg hover:bg-primary duration-300"
+                  className="flex items-center gap-2 text-accent drop-shadow-lg hover:bg-primary dark:hover:bg-black  duration-300"
                   onClick={nextTestimonial}
                 >
                   Next

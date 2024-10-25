@@ -16,7 +16,7 @@ const NewArrivalProductCard = ({ name, description, price, image }) => {
       whileTap={{ scale: 0.95 }}
       transition={{ ease: "easeInOut", duration: 0.5 }}
     >
-      <Card className="h-full overflow-hidden cursor-pointer group transition-all duration-300 ss:mx-4 mx-2">
+      <Card className="h-full bg-white text-secondary dark:bg-black dark:text-primary overflow-hidden cursor-pointer group transition-all duration-300 ss:mx-4 mx-2">
         {/* CardHeader with responsive button display */}
         <CardHeader floated={false} className="relative h-56">
           <img
@@ -31,10 +31,10 @@ const NewArrivalProductCard = ({ name, description, price, image }) => {
         </CardHeader>
 
         <CardBody>
-          <Typography variant="h5" className="mb-2 text-secondary">
+          <Typography variant="h5" className="mb-2">
             {name}
           </Typography>
-          <Typography className="mb-2 text-secondary">{description}</Typography>
+          <Typography className="mb-2">{description}</Typography>
           <Typography variant="h6" className="text-accent">
             N{price.toFixed(2)}k
           </Typography>

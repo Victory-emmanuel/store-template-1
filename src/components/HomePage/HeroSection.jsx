@@ -8,7 +8,7 @@ const HeroSection = () => {
     {
       title: "Welcome to Our Website",
       description: "Discover amazing features and services",
-      image: "https://i.postimg.cc/j5BC8s0M/2151009051.jpg",
+      image: "https://i.postimg.cc/Bb0ZrJQX/1500-x-1000.png",
     },
     {
       title: "Explore Our Products",

@@ -23,7 +23,7 @@ const FooterSection = () => {
 
   return (
     <footer className="bg-secondary text-white py-16 px-6 ss:px-12">
-      <div className="container mx-auto">
+      <div className=" mx-auto">
         <motion.div
           className="grid grid-cols-1 md:grid-cols-3  gap-8"
           initial={{ opacity: 0, y: 50 }}
@@ -105,7 +105,7 @@ const FooterSection = () => {
         </motion.div>
 
         <motion.div
-          className="mt-8 pt-8 border-t border-white/20 text-center"
+          className="mt-8 pt-8 border-t border-white/20 xs:text-center text-left"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.5 }}
