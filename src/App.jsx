@@ -1,9 +1,7 @@
 import { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import FooterSection from "./components/Universal/FooterSection";
-import NavBar from "./components/Universal/NavBar";
+
 import HomePage from "./pages/HomePage";
-import Shop from "./pages/Shop";
 import ThemeToggle from "./components/Universal/ThemeToggle";
 
 function App() {
@@ -22,14 +20,10 @@ function App() {
   return (
     <div className="app bg-primary dark:bg-secondary text-secondary dark:text-primary transition-colors duration-1000">
       <BrowserRouter>
-        <NavBar>
-          <ThemeToggle />
-        </NavBar>
+        <ThemeToggle />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/shop" element={<Shop />} />
         </Routes>
-        <FooterSection />
       </BrowserRouter>
     </div>
   );
